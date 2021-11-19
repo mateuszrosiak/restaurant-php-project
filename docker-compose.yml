@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  php-apache-environment:
+    container_name: php-restaurant
+    image: php:8.0-apache
+    ports:
+      - 6060:80
+    volumes:
+      - ./:/var/www/html/
+
+  db:
+    container_name: db-restaurant
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - '8080:80'
+    restart: always
+    environment:
+      PMA_HOST: db
+    depends_on:
+      - db
