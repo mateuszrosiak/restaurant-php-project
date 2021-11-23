@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-require_once("View.php");
+namespace MyApp\Controllers;
+
+use MyApp\View\View;
 
 class Controller
 {
