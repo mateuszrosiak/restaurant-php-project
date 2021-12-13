@@ -4,22 +4,20 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+      fontFamily: {
+        Poppins: ['Poppins', 'sans-serif'],
+      },
+      extend: {
+        colors: {
+          primary: 'F66B56',
+          secondary: 'FEE299',
+          test: '#000000',
+          success: '#587e0e'
+        }
+      }
   },
   variants: {
     extend: {},
   },
-  plugins: [],
-  theme: {
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      black: colors.black,
-      white: colors.white,
-      gray: colors.trueGray,
-      indigo: colors.indigo,
-      red: colors.rose,
-      yellow: colors.amber,
-    }
-  },
+  plugins: []
 }

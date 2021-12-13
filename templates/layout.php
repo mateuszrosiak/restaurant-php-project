@@ -11,22 +11,28 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="header">
-            <div class="md:container md:mx-auto box-border h-32 w-32 p-4 bg-red-900 flex items-center justify-center">
-                <h1 class="text-center text-white text-3xl">Hello.</h1>
-            </div>
-        </div>
+    <div class="container mx-auto p-6 font-Poppins">
+
+        <header class="header-wrapper">
+            <?php require_once("templates/pages/header.php"); ?>
+            <?php require_once("templates/pages/hero.php"); ?>
+        </header>
 
         <div class="page">
-
+            <?php require_once("templates/pages/products.php"); ?>
         </div>
 
-        <footer class="footer"></footer>
+        <div class="newsletter">
+            <?php require_once("templates/pages/newsletter.php"); ?>
+        </div>
+
+        <footer class="footer">
+            <?php require_once("templates/pages/footer.php"); ?>
+        </footer>
 
     </div>
 
-
+    </div>
 </body>
 
 </html>
