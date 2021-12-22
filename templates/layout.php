@@ -18,13 +18,18 @@
             <?php require_once("templates/pages/hero.php"); ?>
         </header>
 
-        <div class="page">
-            <?php require_once("templates/pages/products.php"); ?>
-        </div>
+        <?php if (!$page) : ?>
+            <section class="page">
+                <?php require_once("templates/pages/products.php"); ?>
+            </section>
 
-        <div class="newsletter">
+        <?php else : require_once("templates/pages/$page.php");
+        endif; ?>
+
+
+        <section class="newsletter">
             <?php require_once("templates/pages/newsletter.php"); ?>
-        </div>
+        </section>
 
         <footer class="footer">
             <?php require_once("templates/pages/footer.php"); ?>

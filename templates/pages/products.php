@@ -10,12 +10,12 @@
     </div>
 
     <div class="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
-        <div class="shadow-lg rounded-lg">
+        <div class="shadow-lg rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-150 duration-300">
             <a href="#">
-                <img src="/templates/images/burger.webp" alt="burger image" class="rounded-tl-lg rounded-tr-lg">
+                <img src=" /templates/images/burger.webp" alt="burger image" class="rounded-tl-lg rounded-tr-lg">
             </a>
             <div class="p-5">
-                <h4><a href="#">Cheeseburger with bacon</a></h4>
+                <h4><a href="#">Cheeseburger xd bacon</a></h4>
                 <div class="flex flex-row my-3">
                     <div class="border-2 border-gray-300 text-gray-400 rounded-md p-1 text-xs mr-1"><a href="#">xs</a></div>
                     <div class="border-2 border-gray-300 text-gray-400 rounded-md p-1 text-xs mr-1"><a href="#">medium</a></div>

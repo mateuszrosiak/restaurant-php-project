@@ -9,9 +9,9 @@ use MyApp\View\View;
 class Controller
 {
     private View $view;
-    private array $request;
+    // private array $request;
 
-    public function __construct($request)
+    public function __construct(array $request)
     {
         $this->request = $request;
         $this->view = new View();
@@ -20,6 +20,25 @@ class Controller
     public function run()
     {
 
-        $this->view->render();
+        switch ($this->action()) {
+            case "cart":
+                $page = 'cart';
+                break;
+            default:
+                $page = '';
+        }
+
+        $this->view->render($page);
+    }
+
+    private function action()
+    {
+        $getData = $this->getRequestGet();
+        return $getData['action'] ?? '';
+    }
+
+    private function getRequestGet()
+    {
+        return $this->request['get'] ?? [''];
     }
 }
