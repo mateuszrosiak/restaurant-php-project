@@ -4,22 +4,23 @@ declare(strict_types=1);
 
 namespace MyApp\Controllers;
 
+use MyApp\Models\Database;
 use MyApp\View\View;
 
 class Controller
 {
     private View $view;
-    // private array $request;
+    private Database $database;
 
-    public function __construct(array $request)
+    public function __construct(array $request, array $dbConfig)
     {
         $this->request = $request;
         $this->view = new View();
+        $this->database = new Database($dbConfig);
     }
 
     public function run()
     {
-
         switch ($this->action()) {
             case "cart":
                 $page = 'cart';

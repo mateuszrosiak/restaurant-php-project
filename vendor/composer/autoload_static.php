@@ -6,6 +6,10 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitea5402b9f57d1f1483560fb64e5ec812
 {
+    public static $files = array (
+        'b5a2d547178ef6c279271ecfff6dbb38' => __DIR__ . '/../..' . '/src/utils/debug.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'M' => 
         array (
@@ -23,6 +27,7 @@ class ComposerStaticInitea5402b9f57d1f1483560fb64e5ec812
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'MyApp\\Controllers\\Controller' => __DIR__ . '/../..' . '/src/Controllers/Controller.php',
+        'MyApp\\Models\\Database' => __DIR__ . '/../..' . '/src/Models/Database.php',
         'MyApp\\View\\View' => __DIR__ . '/../..' . '/src/View/View.php',
     );
 
