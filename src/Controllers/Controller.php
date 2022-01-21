@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MyApp\Controllers;
 
-use MyApp\Models\Database;
+use MyApp\Model\Database;
 use MyApp\View\View;
 
 class Controller
@@ -15,21 +15,28 @@ class Controller
     public function __construct(array $request, array $dbConfig)
     {
         $this->request = $request;
-        $this->view = new View();
+
         $this->database = new Database($dbConfig);
     }
 
     public function run()
     {
+        $this->view = new View();
+
         switch ($this->action()) {
             case "cart":
                 $page = 'cart';
                 break;
             default:
                 $page = '';
+                $products = $this->database->getProducts();
+
+                $params = [
+                    'products' => $products
+                ];
         }
 
-        $this->view->render($page);
+        $this->view->render($page, $params ?? []);
     }
 
     private function action()
