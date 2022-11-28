@@ -3,14 +3,11 @@
 declare(strict_types=1);
 
 use MyApp\Controllers\Controller;
+use MyApp\Request\Request;
 
 require_once("./vendor/autoload.php");
-$dbConfig = require_once("config/config.php");
 
-$request = [
-    'get' => $_GET,
-    'post' => $_POST
-];
+$request = new Request($_GET, $_POST);
 
-$controller = new Controller($request, $dbConfig);
+$controller = new Controller($request);
 $controller->run();

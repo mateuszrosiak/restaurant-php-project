@@ -1,7 +1,9 @@
 ## Restaurant PHP Project
 
-Technologies used:
+Technologies & tools used:
 - Tailwind
 - NodeJS
 - Composer
 - PHP
+
+Project made using MVC design pattern.

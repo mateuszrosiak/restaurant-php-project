@@ -35,7 +35,7 @@ class Database
     public function getProducts()
     {
         try {
-            $query = "SELECT id, name, category, price, image, created_at FROM products";
+            $query = "SELECT id, name, category_id, price, image, created_at FROM products";
 
             $result = $this->conn->query($query);
             $products = $result->fetchAll(PDO::FETCH_ASSOC);
